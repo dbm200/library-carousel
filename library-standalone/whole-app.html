@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+	<style>
+	@import "./purple-green.css";
+	body {
+		color: white;
+		background-color: #303030;
+		padding: 2%;
+		font-family: 'Roboto', sans-serif;
+	}
+</style>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="./dist/library/main-es2015.js"></script>
+	<script src="./dist/library/polyfills-es2015.js"></script>
+	<script src="./dist/library/runtime-es2015.js"></script>
+	<script src="./dist/library/scripts.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script>
+		const app = document.createElement('el-app');
+		document.getElementById('container').appendChild(app);
+	</script>
+</body>

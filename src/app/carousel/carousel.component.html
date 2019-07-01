@@ -1,0 +1,16 @@
+<div *ngIf="resultsList.length === 0">Search for something to appear...</div>
+<div class="carousel-wrapper">
+    <div class="carousel">
+      <div [class]="'carousel__photo'" *ngFor="let image of imgList; let i = index">
+          <img
+            [class]="'carousel__photo--img'"
+            [src]="image.cover_url"
+          >
+          <br>
+          <span>Title: {{ image.title }}</span>
+          <br>
+          <span>Written by: {{ image.author_name[0]}}</span>
+      </div>
+
+    </div>
+</div>

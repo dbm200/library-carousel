@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit(e)" [formGroup]="libraryForm">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Search phrase"
+      id="query"
+      formControlName="query"
+      name="query"
+    />
+  </mat-form-field>
+  <button
+    type="button"
+    id="mic"
+    mat-icon-button
+    [color]="micOn ? 'accent' : ''"
+    (click)="handleMicButton()"
+  >
+    <mat-icon>mic</mat-icon>
+  </button>
+  <button mat-raised-button color="primary" type="submit">
+    Search
+  </button>
+  <span style="margin-left: 30px;">Last search: {{ lastQueryTimeFormatted }}</span>
+</form>

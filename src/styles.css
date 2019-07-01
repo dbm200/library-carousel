@@ -1,0 +1,7 @@
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+body {
+    color: white;
+    background-color: #303030;
+    padding: 2%;
+    font-family: 'Roboto', sans-serif;
+}

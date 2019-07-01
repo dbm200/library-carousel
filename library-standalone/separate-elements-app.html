@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+	<style>
+	@import "./purple-green.css";
+	body {
+		color: white;
+		background-color: #303030;
+		padding: 2%;
+		font-family: 'Roboto', sans-serif;
+	}
+</style>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="./dist/library/main-es2015.js"></script>
+	<script src="./dist/library/polyfills-es2015.js"></script>
+	<script src="./dist/library/runtime-es2015.js"></script>
+	<script src="./dist/library/scripts.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script>
+		const search = document.createElement('el-search');
+		document.getElementById('container').appendChild(search);
+		const carousel = document.createElement('el-carousel');
+		document.getElementById('container').appendChild(carousel);
+		search.addEventListener('queryEmitter', (e) => {
+			carousel.setAttribute('query-To-Process', e.detail);
+			console.log(e);
+		})
+	</script>
+</body>
